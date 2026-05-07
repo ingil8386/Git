@@ -1,5 +1,13 @@
 package sub08;
 
+
+
+interface Person{
+	public abstract void hello();
+	public void info();
+}
+
+
 public class InterfaceTest {
 	public static void main(String[] args) {
 		
@@ -34,6 +42,25 @@ public class InterfaceTest {
 		stv.ChUp();
 		stv.process();
 		stv.save();
+		
+		
+		//인터페이스 활용 : 익명객체사용
+		Person kim = new Person() {
+			
+			@Override
+			public void info() {
+				// TODO Auto-generated method stub
+				System.out.println("김유신입니다");
+			}
+			
+			@Override
+			public void hello() {
+				// TODO Auto-generated method stub
+				System.out.println("안녕하세요");
+
+			}
+		};
+		
 		
 		
 	}
