@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 테이블 태그 실습</title>
+</head>
+<body>
+
+    <h1>HTML 테이블 태그 실습</h1>
+
+    <p>
+        테이블 태그는 표를 만들 때 사용합니다.
+    </p>
+
+    <hr>
+
+    <h2>1. 기본 테이블</h2>
+
+
+    
+    <table border="1">
+        <tr>
+            <td>이름</td>
+            <td>나이</td>
+            <td>지역</td>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>20</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td>이영희</td>
+            <td>22</td>
+            <td>부산</td>
+        </tr>
+    </table>
+
+    <p>
+        table은 표 전체를 의미합니다. <br>
+        tr은 행, td는 칸을 의미합니다.
+    </p>
+
+    <hr>
+
+    <h2>2. 제목 셀이 있는 테이블</h2>
+
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>상품명</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>아메리카노</td>
+            <td>3000원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>카페라떼</td>
+            <td>4000원</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>바닐라라떼</td>
+            <td>4500원</td>
+        </tr>
+    </table>
+
+    <p>
+        th는 제목 칸입니다. <br>
+        td보다 글자가 굵고 가운데 정렬됩니다.
+    </p>
+
+    <hr>
+
+    <h2>3. thead, tbody, tfoot 사용</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>과목</th>
+                <th>점수</th>
+                <th>등급</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>90</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>85</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>70</td>
+                <td>C</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>평균</td>
+                <td>81.6</td>
+                <td>B</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>생년월일</th>
+            <th>나이</th>
+            <th>관리</th>
+        </tr>
+
+        <tr>
+            <td colspan="3">a101</td>
+            <td>김유신</td>
+            <td>1995-03-12</td>
+            <td>31</td>
+            <td>수정 / 삭제</td>
+        </tr>
+
+        <tr>
+            <td>a102</td>
+            <td>김춘추</td>
+            <td>1997-07-25</td>
+            <td>29</td>
+            <td>수정 / 삭제</td>
+        </tr>
+
+        <tr>
+            <td>a103</td>
+            <td>장보고</td>
+            <td>1993-11-08</td>
+            <td>33</td>
+            <td>수정 / 삭제</td>
+        </tr>
+
+        <tr>
+            <td>a104</td>
+            <td>강감찬</td>
+            <td>1999-01-18</td>
+            <td>27</td>
+            <td>수정 / 삭제</td>
+        </tr>
+
+        <tr>
+            <td>a105</td>
+            <td>이순신</td>
+            <td>1991-05-30</td>
+            <td>35</td>
+            <td>수정 / 삭제</td>
+        </tr>
+    </table>
+
+
+    
+    <p>
+        thead는 표의 머리 부분입니다. <br>
+        tbody는 표의 본문 부분입니다. <br>
+        tfoot은 표의 마지막 요약 부분입니다.
+    </p>
+
+    <hr>
+
+    <h2>4. caption 태그</h2>
+
+    <table border="1">
+        <caption>학생 성적표</caption>
+
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+        <tr>
+            <td>김민수</td>
+            <td>90</td>
+            <td>80</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>박지은</td>
+            <td>95</td>
+            <td>88</td>
+            <td>92</td>
+        </tr>
+    </table>
+
+    <p>
+        caption 태그는 표의 제목을 나타냅니다.
+    </p>
+
+    <hr>
+
+    <h2>5. 가로 칸 합치기 colspan</h2>
+
+    <table border="1">
+        <tr>
+            <th>상품명</th>
+            <th>가격</th>
+            <th>수량</th>
+        </tr>
+        <tr>
+            <td>키보드</td>
+            <td>50000원</td>
+            <td>1개</td>
+        </tr>
+        <tr>
+            <td>마우스</td>
+            <td>30000원</td>
+            <td>2개</td>
+        </tr>
+        <tr>
+            <td colspan="2">총 수량</td>
+            <td>3개</td>
+        </tr>
+    </table>
+
+    <p>
+        colspan은 가로 방향으로 칸을 합칠 때 사용합니다.
+    </p>
+
+    <hr>
+
+    <h2>6. 세로 칸 합치기 rowspan</h2>
+
+    <table border="1">
+        <tr>
+            <th>분류</th>
+            <th>상품명</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td rowspan="2">음료</td>
+            <td>아메리카노</td>
+            <td>3000원</td>
+        </tr>
+        <tr>
+            <td>카페라떼</td>
+            <td>4000원</td>
+        </tr>
+        <tr>
+            <td rowspan="2">디저트</td>
+            <td>치즈케이크</td>
+            <td>5500원</td>
+        </tr>
+        <tr>
+            <td>초코쿠키</td>
+            <td>2500원</td>
+        </tr>
+    </table>
+
+    <p>
+        rowspan은 세로 방향으로 칸을 합칠 때 사용합니다.
+    </p>
+
+    <hr>
+
+    <h2>7. colspan과 rowspan 같이 사용</h2>
+
+    <table border="1">
+        <tr>
+            <th>시간</th>
+            <th>월요일</th>
+            <th>화요일</th>
+            <th>수요일</th>
+        </tr>
+        <tr>
+            <td>1교시</td>
+            <td rowspan="2">HTML</td>
+            <td>CSS</td>
+            <td>Java</td>
+        </tr>
+        <tr>
+            <td>2교시</td>
+            <td>JavaScript</td>
+            <td>SQL</td>
+        </tr>
+        <tr>
+            <td>3교시</td>
+            <td colspan="3">프로젝트 실습</td>
+        </tr>
+    </table>
+
+    <p>
+        rowspan은 세로로 합치기, colspan은 가로로 합치기입니다.
+    </p>
+
+    <hr>
+
+    <h2>8. 테이블 종합 실습</h2>
+
+    <table border="1">
+        <caption>카페 주문 내역</caption>
+
+        <thead>
+            <tr>
+                <th>주문번호</th>
+                <th>메뉴</th>
+                <th>수량</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>아메리카노</td>
+                <td>2</td>
+                <td>6000원</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>카페라떼</td>
+                <td>1</td>
+                <td>4000원</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>치즈케이크</td>
+                <td>1</td>
+                <td>5500원</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">총 금액</td>
+                <td>15500원</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <h2>9. 테이블 태그 정리</h2>
+
+    <table border="1">
+        <tr>
+            <th>태그</th>
+            <th>의미</th>
+        </tr>
+        <tr>
+            <td>&lt;table&gt;</td>
+            <td>표 전체</td>
+        </tr>
+        <tr>
+            <td>&lt;tr&gt;</td>
+            <td>표의 한 행</td>
+        </tr>
+        <tr>
+            <td>&lt;td&gt;</td>
+            <td>일반 칸</td>
+        </tr>
+        <tr>
+            <td>&lt;th&gt;</td>
+            <td>제목 칸</td>
+        </tr>
+        <tr>
+            <td>&lt;caption&gt;</td>
+            <td>표 제목</td>
+        </tr>
+        <tr>
+            <td>&lt;thead&gt;</td>
+            <td>표 머리 부분</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>표 본문 부분</td>
+        </tr>
+        <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>표 마지막 요약 부분</td>
+        </tr>
+        <tr>
+            <td>colspan</td>
+            <td>가로 칸 합치기</td>
+        </tr>
+        <tr>
+            <td>rowspan</td>
+            <td>세로 칸 합치기</td>
+        </tr>
+    </table>
+
+</body>
+</html>

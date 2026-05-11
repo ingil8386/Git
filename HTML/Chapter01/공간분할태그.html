@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>공간 분할 태그 연습</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        main {
+            display: flex;
+            width: 1000px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        section {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        article {
+            border: 1px solid #999;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 2px solid blue;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- header: 사이트 상단 영역 -->
+    <header>
+        <h1>HTML 공간 분할 태그 연습</h1>
+        <p>div, span, header, nav, main, section, article, aside, footer</p>
+    </header>
+
+    <!-- nav: 메뉴 영역 -->
+    <nav>
+        <a href="#">홈</a>
+        <a href="#">공지사항</a>
+        <a href="#">게시판</a>
+        <a href="#">문의하기</a>
+    </nav>
+
+    <!-- main: 본문 전체 영역 -->
+    <main>
+
+        <!-- section: 주요 콘텐츠 영역 -->
+        <section>
+            <h2>본문 영역</h2>
+
+            <!-- div: 블록 단위 공간 분할 -->
+            <div class="box">
+                이것은 div 태그입니다.
+                div는 한 줄 전체를 차지하는 블록 태그입니다.
+            </div>
+
+            <div class="box">
+                두 번째 div 영역입니다.
+                div는 레이아웃을 나눌 때 많이 사용합니다.
+            </div>
+
+            <!-- article: 독립적인 글 영역 -->
+            <article>
+                <h3>첫 번째 게시글</h3>
+                <p>
+                    오늘은 HTML의 
+                    <span class="highlight">공간 분할 태그</span>
+                    를 연습하고 있습니다.
+                </p>
+                <p>
+                    span 태그는 문장 안에서 특정 부분만 꾸밀 때 사용합니다.
+                </p>
+            </article>
+
+            <article>
+                <h3>두 번째 게시글</h3>
+                <p>
+                    div는 영역을 나누고, span은 
+                    <span class="highlight">글자 일부</span>
+                    를 나눌 때 사용합니다.
+                </p>
+            </article>
+        </section>
+
+        <!-- aside: 사이드 영역 -->
+        <aside>
+            <h2>사이드 메뉴</h2>
+            <ul>
+                <li>최근 글</li>
+                <li>인기 글</li>
+                <li>광고 영역</li>
+                <li>로그인 박스</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- footer: 하단 영역 -->
+    <footer>
+        <p>Copyright 2026. HTML 공간 분할 태그 연습</p>
+    </footer>
+
+</body>
+</html>

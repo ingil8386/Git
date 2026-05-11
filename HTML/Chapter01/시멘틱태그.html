@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 태그 연습</title>
+</head>
+<body>
+
+    <!-- 사이트 상단 영역 -->
+    <header>
+        <h1>My Blog</h1>
+        <p>HTML 시멘틱 태그를 연습하는 페이지입니다.</p>
+    </header>
+
+    <!-- 메뉴 영역 -->
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+
+    <!-- 페이지의 핵심 내용 -->
+    <main>
+
+        <!-- 소개 섹션 -->
+        <section>
+            <h2>사이트 소개</h2>
+            <p>
+                이 페이지는 HTML5에서 제공하는 시멘틱 태그를 연습하기 위해 만든 예제입니다.
+            </p>
+        </section>
+
+        <!-- 글 목록 섹션 -->
+        <section>
+            <h2>최신 글</h2>
+
+            <!-- 하나의 독립적인 글 -->
+            <article>
+                <header>
+                    <h3>HTML 시멘틱 태그란?</h3>
+                    <p>
+                        작성일:
+                        <time datetime="2026-05-11">2026년 5월 11일</time>
+                    </p>
+                </header>
+
+                <p>
+                    시멘틱 태그는 태그 이름만 보고도 해당 영역의 의미를 알 수 있게 해주는 태그입니다.
+                    예를 들어 header는 머리말, nav는 메뉴, footer는 하단 영역을 의미합니다.
+                </p>
+
+                <figure>
+                    <img src="../images/ball.png" alt="축구공 이미지" width="200">
+                    <figcaption>이미지 설명을 나타내는 figcaption 태그</figcaption>
+                </figure>
+
+                <footer>
+                    <p>카테고리: HTML 기초</p>
+                </footer>
+            </article>
+
+            <!-- 또 다른 독립적인 글 -->
+            <article>
+                <header>
+                    <h3>시멘틱 태그를 사용하는 이유</h3>
+                    <p>
+                        작성일:
+                        <time datetime="2026-05-12">2026년 5월 12일</time>
+                    </p>
+                </header>
+
+                <p>
+                    시멘틱 태그를 사용하면 코드의 구조가 명확해지고,
+                    검색 엔진과 브라우저가 문서의 의미를 더 잘 이해할 수 있습니다.
+                </p>
+
+                <footer>
+                    <p>카테고리: 웹 표준</p>
+                </footer>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- 부가 정보 영역 -->
+    <aside>
+        <h2>사이드 메뉴</h2>
+        <ul>
+            <li><a href="#">인기 글</a></li>
+            <li><a href="#">최근 댓글</a></li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
+    </aside>
+
+    <!-- 사이트 하단 영역 -->
+    <footer>
+        <p>&copy; 2026 My Blog. All rights reserved.</p>
+        <address>
+            문의: <a href="mailto:test@example.com">test@example.com</a>
+        </address>
+    </footer>
+
+</body>
+</html>

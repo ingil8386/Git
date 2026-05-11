@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식 태그 실습</title>
+</head>
+<body>
+
+    <h1>입력양식 태그 실습</h1>
+
+    <form action="#" method="post">
+
+        <h2>1. 기본 텍스트 입력</h2>
+
+        <label for="userid">아이디</label>
+        <input type="text" id="userid" name="userid" placeholder="아이디를 입력하세요">
+        <br><br>
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호 입력">
+        <br><br>
+
+        <label for="username">이름</label>
+        <input type="text" id="username" name="username" value="김태오">
+        <br><br>
+
+        <hr>
+
+        <h2>2. 이메일 / 전화번호 / 검색</h2>
+
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="test@email.com">
+        <br><br>
+
+        <label for="tel">전화번호</label>
+        <input type="tel" id="tel" name="tel" placeholder="010-1234-5678">
+        <br><br>
+
+        <label for="search">검색</label>
+        <input type="search" id="search" name="search" placeholder="검색어 입력">
+        <br><br>
+
+        <hr>
+
+        <h2>3. 숫자 입력</h2>
+
+        <label for="age">나이</label>
+        <input type="number" id="age" name="age" min="1" max="100" value="25">
+        <br><br>
+
+        <label for="count">수량</label>
+        <input type="number" id="count" name="count" min="1" max="10" step="1">
+        <br><br>
+
+        <hr>
+
+        <h2>4. 라디오 버튼</h2>
+        <p>성별을 선택하세요</p>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">남자</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">여자</label>
+
+        <input type="radio" id="none" name="gender" value="none" checked>
+        <label for="none">선택 안 함</label>
+
+        <hr>
+
+        <h2>5. 체크박스</h2>
+        <p>관심 분야를 선택하세요</p>
+
+        <input type="checkbox" id="html" name="interest" value="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="interest" value="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="java" name="interest" value="java">
+        <label for="java">Java</label>
+
+        <input type="checkbox" id="sql" name="interest" value="sql" checked>
+        <label for="sql">SQL</label>
+
+        <hr>
+
+        <h2>6. 날짜 / 시간 입력</h2>
+
+        <label for="birth">생년월일</label>
+        <input type="date" id="birth" name="birth">
+        <br><br>
+
+        <label for="time">시간</label>
+        <input type="time" id="time" name="time">
+        <br><br>
+
+        <label for="datetime">날짜와 시간</label>
+        <input type="datetime-local" id="datetime" name="datetime">
+        <br><br>
+
+        <label for="month">월 선택</label>
+        <input type="month" id="month" name="month">
+        <br><br>
+
+        <label for="week">주 선택</label>
+        <input type="week" id="week" name="week">
+        <br><br>
+
+        <hr>
+
+        <h2>7. 파일 / 색상 / 범위</h2>
+
+        <label for="file">파일 첨부</label>
+        <input type="file" id="file" name="file">
+        <br><br>
+
+        <label for="color">좋아하는 색상</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+
+        <label for="range">만족도</label>
+        <input type="range" id="range" name="range" min="0" max="100" value="50">
+        <br><br>
+
+        <hr>
+
+        <h2>8. 숨겨진 값</h2>
+
+        <input type="hidden" name="userLevel" value="normal">
+        <p>hidden은 화면에는 안 보이지만 서버로 값이 전송됨</p>
+
+        <hr>
+
+        <h2>9. 선택 박스</h2>
+
+        <label for="job">직업 선택</label>
+        <select id="job" name="job">
+            <option value="">직업을 선택하세요</option>
+            <option value="student">학생</option>
+            <option value="developer">개발자</option>
+            <option value="designer">디자이너</option>
+            <option value="teacher">강사</option>
+        </select>
+
+        <br><br>
+
+        <label for="city">지역 선택</label>
+        <select id="city" name="city">
+            <optgroup label="수도권">
+                <option value="seoul">서울</option>
+                <option value="gyeonggi">경기</option>
+                <option value="incheon">인천</option>
+            </optgroup>
+            <optgroup label="지방">
+                <option value="busan">부산</option>
+                <option value="daegu">대구</option>
+                <option value="daejeon">대전</option>
+            </optgroup>
+        </select>
+
+        <hr>
+
+        <h2>10. 여러 줄 입력</h2>
+
+        <label for="intro">자기소개</label>
+        <br>
+        <textarea id="intro" name="intro" rows="5" cols="50" placeholder="자기소개를 입력하세요"></textarea>
+
+        <hr>
+
+        <h2>11. 읽기 전용 / 비활성화</h2>
+
+        <label for="readonly">읽기 전용</label>
+        <input type="text" id="readonly" name="readonly" value="수정 불가" readonly>
+        <br><br>
+
+        <label for="disabled">비활성화</label>
+        <input type="text" id="disabled" name="disabled" value="전송도 안 됨" disabled>
+
+        <hr>
+
+        <h2>12. 필수 입력 / 글자 수 제한</h2>
+
+        <label for="nickname">닉네임</label>
+        <input type="text" id="nickname" name="nickname" required minlength="2" maxlength="10" placeholder="2~10글자">
+        <br><br>
+
+        <label for="code">인증번호</label>
+        <input type="text" id="code" name="code" maxlength="6" placeholder="6자리 입력">
+
+        <hr>
+
+        <h2>13. 버튼 종류</h2>
+
+        <input type="submit" value="전송하기">
+        <input type="reset" value="초기화">
+        <input type="button" value="그냥 버튼">
+
+        <br><br>
+
+        <button type="submit">button 전송</button>
+        <button type="reset">button 초기화</button>
+        <button type="button">button 일반버튼</button>
+
+    </form>
+
+</body>
+</html>
