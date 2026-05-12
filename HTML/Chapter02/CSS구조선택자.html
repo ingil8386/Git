@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 구조 선택자</title>
+
+    <style>
+        .city>li:first-child {
+            color: red;
+        }
+
+        /* 서울 */
+        .city>em:last-child {
+            color: blue;
+        }
+
+        /* 인천 */
+        .city>li:nth-child(2) {
+            color: orange;
+        }
+
+        /* 대전 */
+        .city>li:nth-child(3) {
+            color: yellow;
+        }
+
+        /* 대구 */
+        .city>em:nth-of-type(1) {
+            color: green;
+        }
+
+        /* 울산 */
+
+
+        ul > li:nth-child(3) {background-color:  green;}
+        ul :nth-of-type(2){background-color:  aquamarine;}
+    </style>
+</head>
+
+<body>
+
+    <ul class="city">
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>광주</li>
+        <li>부산</li>
+        <em>울산</em>
+        <em>세종</em>
+        <em>인천</em>
+    </ul>
+
+    <ul>
+        <li>미국</li>
+        <li>한국</li>
+        <li>중국</li>
+    </ul>
+
+
+
+
+</body>
+
+</html>

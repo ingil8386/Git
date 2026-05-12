@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 기타선택자</title>
+
+    <style>
+        /* =========================
+           1. 속성 선택자
+        ========================= */
+
+        input[name=userid] {
+            background-color: lightgreen;
+        }
+
+        input[name=passwd] {
+            background-color: lightcoral;
+        }
+
+        input[type=submit] {
+            background-color: skyblue;
+            border: none;
+            padding: 6px 15px;
+            cursor: pointer;
+        }
+
+        /* placeholder 속성을 가진 input 선택 */
+        input[placeholder] {
+            border: 2px solid gray;
+        }
+
+        /* type="email"인 input 선택 */
+        input[type=email] {
+            background-color: lightyellow;
+        }
+
+
+        /* =========================
+           2. 반응 선택자
+        ========================= */
+
+        /* 클릭하고 있는 순간 */
+        #tag1:active {
+            color: red;
+        }
+
+        /* 마우스를 올렸을 때 */
+        #tag2:hover {
+            color: blue;
+        }
+
+        /* 입력창을 클릭해서 포커스되었을 때 */
+        input:focus {
+            background-color: yellow;
+            outline: 3px solid orange;
+        }
+
+        /* 버튼에 마우스를 올렸을 때 */
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* 버튼을 누르고 있는 순간 */
+        button:active {
+            background-color: red;
+            color: yellow;
+        }
+
+
+        /* =========================
+           3. 가상 요소 선택자
+        ========================= */
+
+        /* 요소 앞에 내용 추가 */
+        .before-text::before {
+            content: "★ ";
+            color: red;
+        }
+
+        /* 요소 뒤에 내용 추가 */
+        .after-text::after {
+            content: " ✔";
+            color: green;
+        }
+
+        /* 문단의 첫 글자만 꾸미기 */
+        .letter-text::first-letter {
+            font-size: 40px;
+            color: purple;
+            font-weight: bold;
+        }
+
+        /* 문단의 첫 줄만 꾸미기 */
+        .line-text::first-line {
+            color: blue;
+            font-weight: bold;
+        }
+
+
+        #won > li::after{
+            content: '원';
+        }
+             #dollar > li::before{
+            content: '$';
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS 기타 선택자 실습</h2>
+
+    <hr>
+
+    <h4>1. 속성 선택자</h4>
+
+    <form action="#">
+        아이디 :
+        <input type="text" name="userid" placeholder="아이디 입력">
+        <br><br>
+
+        비밀번호 :
+        <input type="password" name="passwd" placeholder="비밀번호 입력">
+        <br><br>
+
+        이메일 :
+        <input type="email" name="email" placeholder="이메일 입력">
+        <br><br>
+
+        <input type="submit" value="로그인">
+    </form>
+
+    <hr>
+
+    <h4>2. 반응 선택자</h4>
+
+    <h1 id="tag1">active - 클릭하고 있는 동안 빨강</h1>
+    <h1 id="tag2">hover - 마우스를 올리면 파랑</h1>
+
+    <button>마우스를 올리거나 눌러보세요</button>
+
+    <hr>
+
+    <h4>3. 가상 요소 선택자</h4>
+
+    <ul id="won">
+        <li>100</li>
+        <li>200</li>
+        <li>300</li>
+        <li>400</li>
+    </ul>
+
+    <ul id="dollar">
+        <li>100</li>
+        <li>200</li>
+        <li>300</li>
+        <li>400</li>
+    </ul>
+
+
+    <p class="before-text">before 예제입니다.</p>
+    <p class="after-text">after 예제입니다.</p>
+
+    <p class="letter-text">
+        CSS 가상 요소 선택자는 특정 요소의 일부만 선택하거나,
+        실제 HTML에는 없는 내용을 화면에 추가할 때 사용할 수 있습니다.
+    </p>
+
+    <p class="line-text">
+        이 문장은 첫 번째 줄만 파란색과 굵은 글씨로 표시됩니다.
+        브라우저 화면 너비에 따라 첫 줄의 범위가 달라질 수 있습니다.
+    </p>
+
+</body>
+</html>

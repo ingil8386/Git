@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS display와 overflow 연습</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        .area {
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 2px solid #333;
+            background-color: white;
+        }
+
+        .box {
+            width: 120px;
+            height: 80px;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #222;
+            background-color: lightblue;
+        }
+
+        /* =========================
+           1. block 연습
+        ========================= */
+        .block-area .box {
+            display: block;
+        }
+
+        /* =========================
+           2. inline 연습
+           width, height 적용 안 됨
+        ========================= */
+        .inline-area .box {
+            display: inline;
+        }
+
+        /* =========================
+           3. inline-block 연습
+           한 줄 배치 + width, height 적용
+        ========================= */
+        .inline-block-area .box {
+            display: inline-block;
+        }
+
+        /* =========================
+           4. overflow: visible
+           기본값, 넘친 내용이 그대로 보임
+        ========================= */
+        .overflow-visible {
+            width: 200px;
+            height: 100px;
+            padding: 15px;
+            border: 3px solid red;
+            background-color: #ffe0e0;
+            overflow: visible;
+        }
+
+        /* =========================
+           5. overflow: hidden
+           넘친 내용 잘림
+        ========================= */
+        .overflow-hidden {
+            width: 200px;
+            height: 100px;
+            padding: 15px;
+            border: 3px solid blue;
+            background-color: #e0e8ff;
+            overflow: hidden;
+        }
+
+        /* =========================
+           6. overflow: scroll
+           항상 스크롤 생성
+        ========================= */
+        .overflow-scroll {
+            width: 200px;
+            height: 100px;
+            padding: 15px;
+            border: 3px solid green;
+            background-color: #e0ffe8;
+            overflow: scroll;
+        }
+
+        /* =========================
+           7. overflow: auto
+           넘칠 때만 스크롤 생성
+        ========================= */
+        .overflow-auto {
+            width: 200px;
+            height: 100px;
+            padding: 15px;
+            border: 3px solid purple;
+            background-color: #f0e0ff;
+            overflow: auto;
+        }
+
+        .overflow-wrap {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .long-text {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS display와 overflow 연습</h1>
+
+    <!-- =========================
+         1. block
+    ========================== -->
+    <h2>1. display: block</h2>
+    <div class="area block-area">
+        <div class="box">block 1</div>
+        <div class="box">block 2</div>
+        <div class="box">block 3</div>
+    </div>
+
+    <!-- =========================
+         2. inline
+    ========================== -->
+    <h2>2. display: inline</h2>
+    <div class="area inline-area">
+        <div class="box">inline 1</div>
+        <div class="box">inline 2</div>
+        <div class="box">inline 3</div>
+    </div>
+
+    <!-- =========================
+         3. inline-block
+    ========================== -->
+    <h2>3. display: inline-block</h2>
+    <div class="area inline-block-area">
+        <div class="box">inline-block 1</div>
+        <div class="box">inline-block 2</div>
+        <div class="box">inline-block 3</div>
+    </div>
+
+    <!-- =========================
+         4. overflow
+    ========================== -->
+    <h2>4. overflow 속성</h2>
+
+    <div class="overflow-wrap">
+
+        <div>
+            <h3>overflow: visible</h3>
+            <div class="overflow-visible">
+                <p class="long-text">
+                    내용이 박스 높이보다 많아지면
+                    기본적으로 박스 밖으로 그대로 넘쳐서 보입니다.
+                    이것이 visible입니다.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3>overflow: hidden</h3>
+            <div class="overflow-hidden">
+                <p class="long-text">
+                    내용이 박스 높이보다 많아지면
+                    박스 밖으로 넘친 부분은 잘려서 보이지 않습니다.
+                    이것이 hidden입니다.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3>overflow: scroll</h3>
+            <div class="overflow-scroll">
+                <p class="long-text">
+                    내용이 많든 적든 항상 스크롤바가 나타납니다.
+                    직접 스크롤해서 숨겨진 내용을 확인할 수 있습니다.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3>overflow: auto</h3>
+            <div class="overflow-auto">
+                <p class="long-text">
+                    내용이 넘칠 때에만 자동으로 스크롤바가 나타납니다.
+                    보통 가장 많이 사용하는 방식입니다.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
