@@ -1,38 +1,46 @@
 package test4;
 
-class Person {
-	private String name;
-	private int age;
-
-	public Person(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
-
-	protected void hello() {
-		System.out.println("이름 : " + name);
-		System.out.println("나이 : " + age);
-	}
-}
-
-class Student extends Person{
-	private int studentId;
-
-	public Student(int studentId, String name, int age) {
-		super(name , age);
-		this.studentId = studentId;
-	}
-
-	public void hello() {
-		System.out.println("학번 : " + studentId);
-		// 여기
-		super.hello();
-	}
-}
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Test01 {
-	public static void main(String[] args) {
-		Student kim = new Student(20201234, "김유신", 21);
-		kim.hello();
-	}
+    public static void main(String[] args) {
+        int answer = (int) (Math.random() * 10) + 1;
+        int input = 0, count = 0;
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            count++;
+            System.out.println("------------------------");
+            System.out.print("1 ~ 10 사이 값 입력 : ");
+
+            try {
+                input = sc.nextInt();
+
+                if (input < 0) {
+                    throw new Exception("음수는 입력할 수 없습니다."); //답
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("숫자를 입력하세요.");
+                sc.nextLine(); //답
+                continue;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                continue; //답
+            }
+
+            if (answer > input) {
+                System.out.println("더 큰수 입력하세요.");
+            } else if (answer < input) {
+                System.out.println("더 작은수 입력하세요.");
+            } else {
+                System.out.println(answer + " 정답입니다!");
+                System.out.println("횟수 " + count + "회");
+                break; //답
+            }
+        }
+
+        sc.close();
+        System.out.println("프로그램 종료...");
+    }
 }

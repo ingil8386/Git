@@ -1,56 +1,44 @@
 package test4;
 
-abstract class Vehicle {
-	protected String name;
-	protected int speed;
-
-	public Vehicle(String name, int speed) {
-		this.name = name;
-		this.speed = speed;
-	}
-
-	public void start() {
-		System.out.println(name + " 시동을 켭니다.");
-	}
-
-	public void stop() {
-		System.out.println(name + " 정지합니다.");
-	}
-
-	public abstract void run();
-}
-
-class Bus extends Vehicle {
-	public Bus(String name, int speed) {
-		super(name, speed);
-	}
-
-	@Override
-	public void run() {
-		System.out.println(name + "가 " + speed + "km 달립니다.");
-	}
-}
-
-class Taxi extends Vehicle {
-	public Taxi(String name, int speed) {
-		super(name, speed);
-	}
-
-	@Override
-	public void run() {
-		System.out.println(name + "가 " + speed + "km 달립니다.");
-	}
-}
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Test06 {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        // 60 ~ 100 사이 임의의 수 10개를 더하므로 결과값이 항상 다름
+        printList(createList());
+    }
 
-		Vehicle[] vehicles = { new Bus("버스", 60), new Taxi("택시", 80) };
-		for (Vehicle v : vehicles) {
-		v.start();
-		v.run();
-		v.stop();
-		System.out.println("-------------------");
-		}
-		}
+    public static void printList(List<Integer> scoreList) { //답
+        int total = 0;
+        int size = scoreList.size();
+
+        for (int i = 0; i < size; i++) {
+            int score = scoreList.get(i);
+            total += score;
+            System.out.print(score);
+
+            if (i == size - 1) {
+                System.out.print(" = ");
+            } else {
+                System.out.print(" + ");
+            }
+        }
+
+        System.out.println(total);
+    }
+
+    public static List<Integer> createList() { //답
+        List<Integer> scoreList = new ArrayList<>(); //답
+        Random rand = new Random();
+
+        for (int i = 1; i <= 10; i++) {
+            // 60 ~ 100 사이 임의의 수
+            int num = rand.nextInt(41) + 60;
+            scoreList.add(num);
+        }
+
+        return scoreList;
+    }
 }

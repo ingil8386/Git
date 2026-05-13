@@ -1,45 +1,48 @@
 package test4;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-enum Menu {
-	ESP("에스프레소", 3000), 
-	AMC("아메리카노", 3500),
-	LAT("카페라떼", 4000),
-	CAP("카푸치노", 4500);
+class Orange {
+    private String country;
+    private int price;
 
-	private String name;
+    public Orange(String country, int price) { //답
+        this.country = country;
+        this.price = price;
+    }
 
-	private Menu(String name, int price) {
-		this.name = name;
-		this.price = price;
-	}
-
-	private int price;
-
-	public String getName() {
-		return name;
-	}
-
-	public int getPrice() {
-		return price;
-	}
+    public void show() { //답
+        System.out.println("원산지 : " + country + ", 가격 : " + price);
+    }
 }
 
 public class Test09 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("-------- 메뉴 목록 -------- ");
-		for (Menu menu : Menu.values()) {
-			System.out.print(menu.ordinal() + ") ");
-			System.out.println(menu + ", " + menu.getName() + ", " + menu.getPrice() + "원");
-		}
-		int num = sc.nextInt();
-		Menu[] menus = Menu.values();
-		System.out.println();
-		System.out.println("-------- 선택 결과 -------- ");
-		System.out.println("메뉴 코드 : " + menus[num]);
-		System.out.println("음료 이름 : " + menus[num].getName());
-		System.out.println("가격 : " + menus[num].getPrice() + "원");
-	}
+    public static void main(String[] args) {
+        List<Orange> list1 = new ArrayList<>(); //답
+        list1.add(new Orange("파주", 3000));
+        list1.add(new Orange("수원", 3000));
+
+        List<Orange> list2 = new ArrayList<>(); //답
+        list2.add(new Orange("청주", 3000));
+        list2.add(new Orange("충주", 3000));
+
+        List<Orange> list3 = new ArrayList<>(); //답
+        list3.add(new Orange("밀양", 3000));
+        list3.add(new Orange("함안", 3000));
+
+        Map<String, List<Orange>> map = new HashMap<>();
+        map.put("gyeonggi", list1);
+        map.put("chungbuk", list2);
+        map.put("gyungnam", list3);
+
+        List<Orange> list = map.get("gyeonggi");
+        Orange orange = list.get(1);
+        orange.show();
+
+        map.get("chungbuk").get(1).show();
+        map.get("gyungnam").get(0).show();
+    }
 }

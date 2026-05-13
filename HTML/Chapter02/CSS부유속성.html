@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부유속성 실습</title>
+
+    <style>
+        /* 공통 큰 박스 */
+        .box1,
+        .box2,
+        .box3 {
+            width: 800px;
+            height: 400px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* 내부 작은 박스 공통 */
+        div > div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background: orange;
+        }
+
+        /* 1. 왼쪽으로 띄우기 */
+        .box1 > div {
+            float: left;
+        }
+
+        /* 2. 오른쪽으로 띄우기 */
+        .box2 > div {
+            float: right;
+        }
+
+        /* 3. 일부는 왼쪽, 일부는 오른쪽 */
+        .box3 > div:nth-child(1),
+        .box3 > div:nth-child(2),
+        .box3 > div:nth-child(3) {
+            float: left;
+        }
+
+        .box3 > div:nth-child(4),
+        .box3 > div:nth-child(5),
+        .box3 > div:nth-child(6) {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>1. float: left</h3>
+    <div class="box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <h3>2. float: right</h3>
+    <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <h3>3. 왼쪽 / 오른쪽 나누기</h3>
+    <div class="box3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+</body>
+
+</html>

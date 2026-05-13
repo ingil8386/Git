@@ -1,47 +1,37 @@
 package test4;
 
-class Product {
-	protected String productName;
-	protected int price;
-	public Product(String productName, int price) {
-		this.productName = productName;
-		this.price = price;
-	}
-	
-	public void info () {}
-	}
+import java.util.Scanner;
 
-class SmartPhone extends Product {
-	public SmartPhone(String productName, int price) {
-		super(productName, price);
-	}
-
-	@Override
-	public void info() {
-		System.out.println("--------------------");
-		System.out.println("제품명 : " + productName);
-		System.out.println("제품가격 : " + price);
-	}
-}
-
-class Laptop extends Product {
-	public Laptop(String productName, int price) {
-		super(productName, price);
-	}
-
-	@Override
-	public void info() {
-		System.out.println("--------------------");
-		System.out.println("제품명 : " + productName);
-		System.out.println("제품가격 : " + price);
-	}
+class LoginException extends Exception {
+    public LoginException(String msg) { //답
+        super(msg);
+    }
 }
 
 public class Test03 {
-	public static void main(String[] args) {
-		Product p1 = new SmartPhone("갤럭시", 100);
-		Product p2 = new Laptop("맥북프로", 200);
-		p1.info();
-		p2.info();
-	}
+    public static void main(String[] args) {
+        String userId = "a101";
+        String userPw = "abc1234";
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("아이디 : ");
+            String inputId = sc.nextLine();
+
+            System.out.print("비밀번호 : ");
+            String inputPw = sc.nextLine();
+
+            if (!inputId.equals(userId)) { //답
+                throw new LoginException("아이디 틀림!");
+            } else if (!inputPw.equals(userPw)) { //답
+                throw new LoginException("비밀번호 틀림!");
+            } else {
+                System.out.println("로그인 성공!");
+            }
+        } catch (LoginException e) { //답
+            System.out.println(e.getMessage());
+        } finally {
+            sc.close();
+        }
+    }
 }
