@@ -1,0 +1,278 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font-family: "돋움", Dotum, sans-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+#wrapper {
+    width: 980px;
+    margin: 0 auto;
+}
+
+/* =========================
+   헤더
+========================= */
+header {
+    width: 100%;
+    height: 142px;
+}
+
+.header_inner {
+    position: relative;
+    width: 100%;
+    height: 92px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.logo img {
+    display: block;
+}
+
+.top_menu {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    color: #888;
+}
+
+.top_menu a {
+    font-size: 12px;
+    color: #666;
+}
+
+.top_menu a:hover {
+    text-decoration: underline;
+}
+
+.top_menu span {
+    margin: 0 5px;
+    color: #ccc;
+}
+
+.delivery {
+    position: absolute;
+    top: 55px;
+    right: 0;
+}
+
+/* 메인 메뉴 */
+nav {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+nav > ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+nav > ul > li {
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #eee;
+}
+
+nav > ul > li:first-child {
+    border-left: 1px solid #eee;
+}
+
+nav > ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav > ul > li > a:hover {
+    color: #75a843;
+}
+
+/* =========================
+   서브 상단 배너
+========================= */
+.sub_top {
+    position: relative;
+    width: 100%;
+    height: 184px;
+    background: url("https://farmstory.vercel.app/images/sub_top_bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.sub_top img {
+    position: absolute;
+    top: 72px;
+    left: 10px;
+}
+
+/* =========================
+   메인 영역
+========================= */
+main {
+    display: flex;
+    width: 100%;
+    min-height: 650px;
+}
+
+/* 왼쪽 메뉴 */
+aside {
+    width: 176px;
+    min-height: 650px;
+    border-right: 1px solid #ddd;
+}
+
+aside h3 {
+    width: 100%;
+    height: 81px;
+    padding-top: 20px;
+}
+
+aside h3 img {
+    display: block;
+}
+
+.lnb {
+    width: 175px;
+}
+
+.lnb > li {
+    width: 175px;
+    height: 29px;
+    border-bottom: 1px solid #ddd;
+}
+
+.lnb > li:first-child {
+    border-top: 1px solid #ddd;
+}
+
+.lnb > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 29px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #666;
+}
+
+.lnb > li.on > a,
+.lnb > li > a:hover {
+    color: #75a843;
+    background-color: #f7f7f7;
+}
+
+/* 오른쪽 콘텐츠 */
+.content {
+    width: 804px;
+    min-height: 650px;
+    padding-left: 40px;
+}
+
+.content_title {
+    position: relative;
+    width: 100%;
+    height: 81px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content_title > img {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}
+
+.location {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    color: #888;
+}
+
+.location strong {
+    color: #75a843;
+}
+
+/* 본문 */
+article {
+    padding-top: 40px;
+}
+
+.main_banner {
+    display: block;
+    width: 750px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+article p {
+    line-height: 22px;
+    margin-bottom: 22px;
+    color: #666;
+}
+
+article h4 {
+    font-size: 14px;
+    color: #75a843;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   푸터
+========================= */
+footer {
+    width: 100%;
+    height: 130px;
+    border-top: 1px solid #ddd;
+}
+
+.footer_inner {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.footer_inner > img {
+    margin-right: 25px;
+}
+
+.footer_info {
+    line-height: 18px;
+    color: #999;
+}
+
+.footer_info p {
+    margin-bottom: 2px;
+}
+
+.copyright {
+    margin-top: 4px;
+    font-weight: bold;
+}

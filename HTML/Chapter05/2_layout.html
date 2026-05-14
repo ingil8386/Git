@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout #2</title>
+
+    <style>
+        /* 기본 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 전체 컨테이너 */
+        #container {
+            width: 800px;
+            padding: 10px;
+            margin: 20px auto;
+            border: 1px solid black;
+            background-color: #fff;
+        }
+
+        /* 공통 스타일 */
+        header,
+        main,
+        footer,
+        section {
+            width: 100%;
+            border: 1px dashed black;
+            padding: 10px;
+        }
+
+        /* header */
+        header {
+            height: 120px;
+            margin-bottom: 10px;
+            background-color: #eee;
+        }
+
+        /* main */
+        main {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        /* section */
+        section {
+            height: 200px;
+            background-color: #ddd;
+        }
+
+        section:first-of-type {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* footer */
+        footer {
+            height: 100px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <header>header</header>
+
+        <main>
+            main
+            <section>section</section>
+            <section>section</section>
+        </main>
+
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>

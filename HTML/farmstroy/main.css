@@ -1,0 +1,452 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    color: #333;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+
+/* =========================
+   헤더
+========================= */
+
+header {
+    width: 980px;
+    height: 142px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .top {
+    position: relative;
+    height: 92px;
+}
+
+header .top > a {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+header .top-menu {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+header .top-menu a:hover {
+    text-decoration: underline;
+}
+
+header .top-menu span {
+    margin: 0 4px;
+    color: #ccc;
+}
+
+header .header-title {
+    position: absolute;
+    right: 0;
+    top: 48px;
+}
+
+
+/* 네비게이션 */
+
+nav {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+}
+
+nav li {
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid #ddd;
+}
+
+nav li:last-child {
+    border-right: 1px solid #ddd;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: #444;
+}
+
+nav a:hover {
+    color: #7aa625;
+}
+
+
+/* =========================
+   메인 슬라이더
+========================= */
+
+.slider {
+    width: 91%;
+    height: 312px;
+    background-image: url("https://farmstory.vercel.app/images/main_slide_img1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto; /* 가운데 정렬 */
+
+}
+
+.slider-inner {
+    width: 980px;
+    height: 312px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    position: relative;
+}
+
+.slider-title {
+    margin-top: 40px;
+}
+
+
+/* 우측 이벤트 배너 */
+
+.banner-inner {
+    position: relative;
+    width: 230px;
+    height: 312px;
+    background-image: url("https://farmstory.vercel.app/images/main_banner_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner-grand {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+}
+
+.banner-title {
+    position: absolute;
+    left: 15px;
+    top: 65px;
+}
+
+.banner-fruit {
+    position: absolute;
+    right: 5px;
+    bottom: 20px;
+}
+
+
+/* =========================
+   장보기
+========================= */
+
+.market {
+    width: 980px;
+    margin: 0 auto;
+    padding: 40px 0 35px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.market-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product > img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product h4 {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px;
+}
+
+.product h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.product p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.product del {
+    color: #999;
+    margin-right: 4px;
+}
+
+.product span {
+    color: #e85a3a;
+    font-weight: bold;
+}
+
+.product strong {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* =========================
+   중간 배너
+========================= */
+
+.sub-banner {
+    width: 980px;
+    height: 74px;
+    margin: 0 auto 35px;
+    display: flex;
+    gap: 10px;
+}
+
+.sub-box {
+    width: 485px;
+    height: 74px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sub-box img {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.food {
+    background: #e9e0cf;
+}
+
+.chef {
+    background: #d8e6c8;
+}
+
+
+/* =========================
+   최신글 3단
+========================= */
+
+.latest {
+    width: 980px;
+    margin: 0 auto 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-box {
+    width: 316px;
+}
+
+.latest-title {
+    margin-bottom: 15px;
+}
+
+.latest-content {
+    display: flex;
+    gap: 12px;
+}
+
+.latest-content > img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.latest-content ul {
+    width: calc(100% - 87px);
+}
+
+.latest-content li {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: 11px;
+    line-height: 17px;
+    color: #555;
+}
+
+.latest-content a {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.latest-content a:hover {
+    text-decoration: underline;
+}
+
+.latest-content span {
+    color: #999;
+}
+
+
+/* =========================
+   고객센터 / 계좌 / 공지
+========================= */
+
+.info {
+    width: 980px;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    display: flex;
+    padding: 25px 0 35px;
+}
+
+.info article {
+    min-height: 180px;
+    padding: 0 20px;
+}
+
+.customer {
+    width: 360px;
+    border-right: 1px solid #ddd;
+}
+
+.account {
+    width: 260px;
+    border-right: 1px solid #ddd;
+}
+
+.notice {
+    width: 360px;
+}
+
+.info-title {
+    margin-bottom: 15px;
+}
+
+
+/* 고객센터 */
+
+.customer-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.customer p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.customer-btns {
+    display: flex;
+    gap: 4px;
+}
+
+
+/* 계좌안내 */
+
+.account p {
+    font-size: 12px;
+    line-height: 22px;
+    color: #666;
+}
+
+
+/* 공지사항 */
+
+.notice li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.notice a {
+    width: 245px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice a:hover {
+    text-decoration: underline;
+}
+
+.notice span {
+    color: #999;
+}
+
+
+/* =========================
+   푸터
+========================= */
+
+footer {
+    width: 980px;
+    height: 120px;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 25px;
+    gap: 25px;
+}
+
+footer > img {
+    margin-top: 5px;
+}
+
+.footer-text {
+    font-size: 11px;
+    color: #777;
+    line-height: 18px;
+}
+
+.copyright {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #555;
+}
