@@ -81,6 +81,7 @@ main {
     min-height: 500px;
     border: 1px solid blue;
     box-sizing: border-box;
+
 }
 
 main > div {
@@ -89,8 +90,50 @@ main > div {
     box-sizing: border-box;
     margin-bottom: 10px;
 }
-main > div:nth-child(1) {height: 312px;}
-main > div:nth-child(2) {height: 286px;}
+
+/* 첫번째배너 */
+main > div:nth-child(1) {  
+        height: 312px;   
+        background-image: url('../images/main_slide_img1.jpg');
+
+}
+main > div:nth-child(1)> div {  
+      height: 312px;  
+       
+       background-image: url('../images/main_banner_bg.jpg');
+       background-position: right;
+       background-repeat: no-repeat;
+     
+}
+
+main > div:nth-child(1) > div > img {
+    
+       padding: 10px;
+    display: block;
+        margin-left: auto;
+         
+}
+
+
+
+/* main > div:nth-child(1) > div {
+  
+   
+} */
+
+
+
+main > div:nth-child(1)> div > image{  
+ 
+     background-position: right;
+       
+}
+
+
+
+
+
+main > div:nth-child(2) {height: 286px; background-color :green}
 main > div:nth-child(3) {height:  74px;}
 main > div:nth-child(4) {height: 186px;}
 main > div:nth-child(5) {height: 154px;}
