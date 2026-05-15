@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 secetion 1 
-
+main commit
 여기엔 secetion 2가 없습니다.
 
 
 
+=======
+여기는 main 브랜치입니다
+ 
+
+
+#SECTION 2
+CONTNET2 BY feature
+>>>>>>> feature
