@@ -105,11 +105,13 @@ main {
 
 /* 좌측 메뉴 */
 aside {
-    width: 176px;
+    width: 150px;
     min-height: 650px;
     padding: 18px 14px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
+
+    
 }
 
 aside h3 {
@@ -117,6 +119,16 @@ aside h3 {
     font-size: 15px;
     font-weight: bold;
     color: #222;
+    height: 30px;
+    background-color: #e5e5e5;
+    border-radius: 22px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
 }
 
 .menu {
@@ -163,6 +175,7 @@ aside h3 {
 .content {
     width: 804px;
     padding: 18px 22px 40px;
+    border-right: 1px solid #ddd;
     
 }
 
@@ -559,23 +572,17 @@ form .btn_area {
 ========================================================= */
 footer {
     width: 980px;
-    margin: 1 0 0 0 auto;
-    padding: 18px 0 30px;
+    margin: 0 auto;
+    padding: 18px 10px 30px;
     border-top: 1px solid #ddd;
     color: white;
     line-height: 18px;
     background-color: black;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
-footer  > p{
-
-    margin: 0 0 0 10px;
-    
-    padding: 0 0 0 10px;
-
-}
 
 
 
